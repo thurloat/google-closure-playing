@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<script type="text/javascript" src="test-together.js"></script>
+	</head>
+	<body onload="sayHi()">
+		<div id="info"></div>
+		<div id="left"></div>
+		<div id="top"></div>
+		<div id="obj"> <div id="retina" style="position:relative; height: 50px; width: 50px; border-radius: 50px; background-color: #111; top: 25; left: 25;"></div></div>
+		<div id="outer_eye" style="position: absolute; height: 500px; width: 500px; left: 100; top: 80; background-color: #EEE; border-radius: 500px;"></div>
+		<input id="input" x-webkit-speech speech onwebkitspeechchange="updateFloatyText(this.value);"/>
+	</body>
+</html>
