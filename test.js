@@ -1,4 +1,5 @@
 goog.provide('thurloat.floatyeye');
+goog.provide('thurloat.floateye.giver')
 
 goog.require('goog.dom');
 goog.require('goog.events');
@@ -34,8 +35,10 @@ function printThings(e){
     }
 }
 
-function sayHi() {
+thurloat.floatyeye.giver = function() {
     goog.dom.setProperties(goog.dom.getElement('obj'), {'style': 'position: absolute; z-index: 100; background-color: #339; height: 100px; width: 100px; border-radius: 100px;'});
     goog.events.listen(window, 'deviceorientation', printThings);
     goog.events.listen(goog.dom.getElement('input'), 'input', updateFloatyText);
-}
+};
+
+goog.exportSymbol('thurloat.floatyeye.giver', thurloat.floatyeye.giver);
